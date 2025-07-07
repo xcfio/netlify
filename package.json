@@ -6,15 +6,15 @@
     "author": "xcfio",
     "license": "MIT",
     "scripts": {
-        "dev": "netlify dev",
+        "dev": "netlify dev --no-open",
         "test": "tsc --noEmit"
     },
     "dependencies": {
-        "fastify": "*",
-        "serverless-http": "*",
-        "@netlify/functions": "*"
+        "fastify": "^5.4.0",
+        "serverless-http": "^3.2.0",
+        "@netlify/functions": "^4.1.9"
     },
     "devDependencies": {
-        "@types/node": "*"
+        "@types/node": "^24.0.10"
     }
 }

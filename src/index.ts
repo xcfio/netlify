@@ -1,7 +1,10 @@
-import Router from "fastify"
+import Fastify from "fastify"
 
-const fastify = Router()
+export default async () => {
+    const fastify = Fastify({ logger: true })
 
-fastify.get("/", () => "Success")
+    fastify.get("/", () => "Success")
+    fastify.get("/status", (_, reply) => reply.code(200).send({ status: "ok" }))
 
-export default fastify
+    return fastify
+}
